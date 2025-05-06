@@ -12,30 +12,56 @@
 
     <div class="header">
         <h1>Library</h1>
+        <div><button id="openPopUp" class="action_button">Add new book</button></div>
     </div>
 
-    <div class="main">
-        <div class="card">
-            <h3>You have 0 books</h3>
-            <button>Add first book!</button>
+    <div class="wrapper">
+        <div class="main">
+        
         </div>
-    
+        <div id="beggining_card" class="card">
+            <h3>You have 0 books</h3>
+            <button id="openPopUp">Add first book!</button>
+        </div>
         <div class="form_container">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="book_name">
-            
-            <label for="author">Author</label>
-            <input type="text" id="author" name="book_author">
-            
-            <label for="pages">Pages</label>
-            <input type="tel" id="pages" name="book_pages">
-            
-            <label for="have_read">Have read?</label>
-            <input type="checkbox" id="have_read" name="book_read">
-
-            <button type="submit">Add Book</button>
-        </div> 
+            <form action="" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="book_name" required>
+        
+                <label for="author">Author</label>
+                <input type="text" id="author" name="book_author" required>
+        
+                <label for="pages">Pages</label>
+                <input type="tel" id="pages" name="book_pages" required pattern="[0-9]*">
+        
+                <div class="checkbox">
+                    <label for="have_read">Have read?</label>
+                    <input type="checkbox" id="have_read" name="book_read" >
+                </div>
+                <button id="submitButton" type="submit">Add Book</button>
+            </form>
+        </div>
+            <!-- <div id="book_card" class="card">
+                <h2>The Hobbit</h2>
+                <p>by</p>
+                <h4>Tolkien</h4>
+                <div class="labels">
+                    <div class="pages">195 Pages</div>
+                    <div class="have_read">Have read</div>
+                </div>
+                <div class="action_buttons">
+                    <button id="read_book">Read</button>
+                    <button id="delete_book">Delete</button>
+                </div>
+            </div> -->
+        
+        
+        <div class="footer">
+            <p class="footer"> Created by RicardOnChain</p>
+            <a href="https://github.com/RicardOnChain" target="_blank">
+                <img class="github-logo" src="github-mark.svg">
+              </a>
+        </div>
     </div>
-    
 </body>
 </html> 

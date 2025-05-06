@@ -1,24 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
 body{
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     font-family: -apple-system,BlinkMacSystemFont,Trebuchet MS,Roboto,Ubuntu,sans-serif;
+    position: relative;
+    background-color: whitesmoke;
+    height: 100vh;
 }
 
 .header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
     padding: 30px 50px;
     box-shadow: 0px 5px 7px rgb(0, 0, 0,40%);
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+
 }
+
+.wrapper{
+
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    height: 100%;
+}
+
 .main{
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: transparent;
+    flex: 1 1 auto;
+
 }
 
 .card{
+    position: absolute;
+    left: calc(50vw - 120px);
+    top:120px;
+    z-index: 9999;
+
     background-color: white;
     border-radius: 15px;
     display: flex;
@@ -27,46 +59,129 @@ body{
     box-shadow: 4px 4px 7px rgb(0, 0, 0,40%);
     width: 200px;
     padding: 50px 20px;
-    margin: auto;
     align-items: center;
+
 }
 
 button{
-    background-color: rgba(12, 188, 56, 0.4);
+    background-color: whitesmoke;
     border-radius: 20px;
-    border-style: none;
+    border: 2px solid rgba(12, 188, 56, 0.4);
     padding: 10px 20px;
     margin: auto;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
+
 button:hover{
-    translate: 0 -3px ;
+    background-color:  rgba(12, 188, 56, 0.4);
+    border-color: transparent;
+    translate: 0px;
 }
 
+button#delete_book:hover{
+    background-color:  rgba(241, 31, 7, 0.4);
+    border-color: transparent;
+    translate: 0px;
+}
 
-
-.form_container{
+form{
     display: none;
     flex-wrap: wrap;
     position: absolute;
-    left: calc(40%);
-    top:0px;
+    left: calc(50vw - 125px);
+    top:100px;
     z-index: 9999;
-    align-content: start;
+    align-items: center;
     box-shadow: 4px 4px 7px rgb(0, 0, 0,40%);
     padding: 40px 50px;
     width: 150px;
     border-radius: 15px;
     background-color: white;
-    gap: 15px;
+    gap: 10px;
 }
 
-input, label{
 
+input {
+ width: 100%;
+ margin-bottom: 10px;
+}
+
+#have_read{
+    width: 50px;
+    margin-bottom: 0;
+}
+
+.checkbox{
+    margin-bottom: 15px;
+}
+
+#book_card{
+    display: flex;
+    flex-direction: column;
+    position: static;
+    gap: 15px;
+    width: 250px;
+    padding: 40px 30px;
+    margin: 0;
+    background-color: white;
+    border-radius: 15px;
+    align-items: start;
+    height: fit-content;
+}
+
+#book_card > *{
+    display: flex;
+    gap: 10px;
+}
+
+.action_buttons{
+    align-self: center;
+    margin-top: 20px;
+}
+.labels > div{
+    border-radius: 20px;
+    padding: 5px 15px;
+    text-align: center;
+    width: 80px;
+    font-size: 0.8em;
+
+}
+
+.pages{
+    background-color: rgba(203, 79, 7, 0.4);
 }
 
 .have_read{
-    width: auto;
+    background-color: rgba(7, 134, 203, 0.4);
+}
+
+
+.action_buttons > button{
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+
+#delete_book{
+    border-color:rgba(241, 31, 7, 0.4); ;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 5px;
+    font-size: 15px;
+    background-color: white;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.github-logo{
+    flex: 0 0 10px;
+    width: 20px;
+    
 }
